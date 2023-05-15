@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:roadside/pages/home_page.dart';
-import 'package:roadside/pages/login_page.dart';
+import 'package:roadside/pages/get_started_page.dart';
+import 'package:roadside/pages/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +13,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: LoginPage(),
+      home: SplashScreen(),
+      //home: GetStartedPage(),
       debugShowCheckedModeBanner: false,
     );
   }
