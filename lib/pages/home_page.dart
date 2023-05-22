@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
@@ -22,43 +23,111 @@ class _HomePageState extends State<HomePage> {
             children: [
               Container(
                 decoration: const BoxDecoration(
-                    //color: Color.fromRGBO(21, 97, 109, 100),
-                    ),
+                  color: Color.fromRGBO(21, 97, 109, 100),
+                ),
                 child: Padding(
                   padding: const EdgeInsets.only(top: 20),
                   child: Column(
                     children: [
                       Row(
                         children: [
-                          const Padding(
-                            padding: EdgeInsets.only(left: 20),
-                            child: CircleAvatar(
-                                backgroundImage:
-                                    AssetImage('lib/images/charles.jpg'),
-                                radius: 25),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 20),
+                            child: Align(
+                              alignment: Alignment.centerLeft,
+                              child: Container(
+                                width: 200,
+                                height: 70,
+                                decoration: BoxDecoration(
+                                  color:
+                                      const Color.fromARGB(255, 228, 227, 227),
+                                  borderRadius: BorderRadius.circular(30),
+                                ),
+                                child: Row(
+                                  children: [
+                                    const Padding(
+                                      padding: EdgeInsets.only(left: 20),
+                                      child: CircleAvatar(
+                                          backgroundImage: AssetImage(
+                                              'lib/images/charles.jpg'),
+                                          radius: 25),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 10),
+                                      child: Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          children: [
+                                            const Text('Welcome Back!'),
+                                            const Text(
+                                              'Charles',
+                                              style: TextStyle(fontSize: 20),
+                                            ),
+                                          ]),
+                                    ),
+                                    // Expanded(
+                                    //   child: IconButton(
+                                    //     icon: const Icon(Icons.menu, size: 30),
+                                    //     onPressed: () {
+                                    //       _key.currentState!
+                                    //           .openDrawer(); //<-- SEE HERE
+                                    //     },
+                                    //     alignment: Alignment.centerRight,
+                                    //   ),
+                                    // ),
+                                  ],
+                                ),
+                              ),
+                            ),
                           ),
                           Padding(
-                            padding: const EdgeInsets.only(left: 10),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                const Text('Welcome Back!'),
-                                const Text(
-                                  'Charles',
-                                  style: TextStyle(fontSize: 20),
+                            padding: const EdgeInsets.all(8.0),
+                            child: Container(
+                                height: 70,
+                                width: 150,
+                                decoration: BoxDecoration(
+                                  color:
+                                      const Color.fromARGB(255, 228, 227, 227),
+                                  borderRadius: BorderRadius.circular(30),
                                 ),
-                              ],
-                            ),
-                          ),
-                          Expanded(
-                            child: IconButton(
-                              icon: const Icon(Icons.menu, size: 30),
-                              onPressed: () {
-                                _key.currentState!.openDrawer(); //<-- SEE HERE
-                              },
-                              alignment: Alignment.centerRight,
-                            ),
-                          ),
+                                // child: Column(
+                                //   crossAxisAlignment:
+                                //       CrossAxisAlignment.center,
+                                //   mainAxisAlignment: MainAxisAlignment.center,
+                                //   children: [
+                                //     Align(
+                                //         alignment: Alignment.center,
+                                //         child: Text('Your Location',
+                                //             style: TextStyle(fontSize: 12))),
+                                //     AutoSizeText(
+                                //       'Cummings, North Dakota',
+                                //       style: TextStyle(fontSize: 14),
+                                //       textAlign: TextAlign.center,
+                                //       //maxLines: 1,
+                                //     )
+                                //   ],
+                                // ),
+
+                                child: Row(
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Container(
+                                        width: 50,
+                                        height: 50,
+                                        decoration: BoxDecoration(
+                                          borderRadius: BorderRadius.circular(30),
+                                          color: Color.fromRGBO(21, 97, 109, 100),
+                                        ),
+                                        child: Icon(Icons.place,),
+                                      ),
+                                    ),
+                                    Text('Your\nLocation', textAlign: TextAlign.center,)
+                                  ],
+                                )),
+                          )
                         ],
                       ),
                       Padding(
